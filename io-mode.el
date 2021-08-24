@@ -139,18 +139,22 @@
 (defvar io-messages-re
   (regexp-opt
    '("activate" "activeCoroCount" "and" "asString"
+     "arguments" 
      "block" "break" "catch" "clone" "collectGarbage"
      "compileString" "continue" "do" "doFile" "doMessage"
      "doString" "else" "elseif" "exit" "for" "foreach"
      "foreachReversed" "forward" "getSlot" "getEnvironmentVariable"
      "hasSlot" "if" "ifFalse" "ifNil" "ifTrue"
      "isActive" "isNil" "isResumable" "list"
-     "message" "method" "or" "parent" "pass" "pause"
+     "message" "method"
+     "name"
+     "or" "parent" "pass" "pause"
      "perform" "performOn" "performWithArgList" "print"
      "println" "proto" "raise" "raiseResumable" "removeSlot"
      "resend" "resume" "return" "schedulerSleepSeconds"
      "sender" "setSchedulerSleepSeconds" "setSlot"
      "shallowCopy" "slotNames" "super" "system"
+     "target"
      "then" "thisBlock" "thisMessage" "try" "type"
      "uniqueId" "updateSlot" "wait" "while" "write"
      "writeln" "yield")
@@ -374,7 +378,7 @@
 ;;
 
 ;;;###autoload
-(define-derived-mode io-mode fundamental-mode
+(define-derived-mode io-mode prog-mode
   "Io"
   "Major mode for editing Io language..."
 
